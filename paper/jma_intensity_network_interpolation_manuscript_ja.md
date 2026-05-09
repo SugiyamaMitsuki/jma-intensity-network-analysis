@@ -394,7 +394,7 @@ J-SHISのAVS30および地盤増幅率は，明瞭な地域構造を示す。低
 - 防災科学技術研究所 (n.d.-a). J-SHIS: Japan Seismic Hazard Information Station. https://www.j-shis.bosai.go.jp/en/（参照 2026-05-09）
 - 防災科学技術研究所 (n.d.-b). User guide to J-SHIS: Site Amplification Factor. https://www.j-shis.bosai.go.jp/map/JSHIS2/man/en/man_subsurface_ground.html（参照 2026-05-09）
 - 司宏俊, 翠川三郎 (1999). New attenuation relationships for peak ground acceleration and velocity considering effects of fault type and site condition. Journal of Structural and Construction Engineering (Transactions of AIJ), 64(523), 63-70. https://doi.org/10.3130/aijs.64.63_2
-- 杉山美樹, 吉岡優, 平井敬, 福和伸夫 (2020). 震度観測体制の年代差・地域差の定量評価と震度情報の解釈. 日本地震工学会論文集, 20(7), 7_101-7_119. https://doi.org/10.5610/jaee.20.7_101
+- 杉山充樹, 吉岡優樹, 平井敬, 福和伸夫 (2020). 震度観測体制の年代差・地域差の定量評価と震度情報の解釈. 日本地震工学会論文集, 20(7), 7_101-7_119. https://doi.org/10.5610/jaee.20.7_101
 - Wald, D. J., Quitoriano, V., Heaton, T. H., Kanamori, H., Scrivner, C. W., and Worden, C. B. (1999). TriNet ShakeMaps: Rapid generation of peak ground motion and intensity maps for earthquakes in southern California. Earthquake Spectra, 15(3), 537-555. https://doi.org/10.1193/1.1586057
 - Worden, C. B., Wald, D. J., Allen, T. I., Lin, K., Garcia, D., and Cua, G. (2010). A revised ground-motion and intensity interpolation scheme for ShakeMap. Bulletin of the Seismological Society of America, 100(6), 3083-3096. https://doi.org/10.1785/0120100101
 - Yamamoto, S., Aoi, S., Kunugi, T., and Suzuki, W. (2011). Improvement in the accuracy of expected seismic intensities for earthquake early warning in Japan using empirically estimated site amplification factors. Earth, Planets and Space, 63, 57-69. https://doi.org/10.5047/eps.2010.12.002
