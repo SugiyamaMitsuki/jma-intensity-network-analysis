@@ -2,8 +2,6 @@ cff-version: 1.2.0
 message: "If you use this repository, please cite the manuscript or this repository."
 title: "Observation-Network Bias in JMA Seismic Intensity and Empirical Station-Density Effects on Pointwise Intensity-Class Interpolation"
 authors:
-  - family-names: Sugiyama
-    given-names: Mitsuki
   - name: Codex
 date-released: "2026-05-09"
 url: "https://github.com/SugiyamaMitsuki/jma-intensity-network-analysis"
@@ -12,8 +10,6 @@ preferred-citation:
   type: article
   title: "Observation-Network Bias in JMA Seismic Intensity and Empirical Station-Density Effects on Pointwise Intensity-Class Interpolation"
   authors:
-    - family-names: Sugiyama
-      given-names: Mitsuki
     - name: Codex
   year: 2026
   notes: "Manuscript in preparation."
