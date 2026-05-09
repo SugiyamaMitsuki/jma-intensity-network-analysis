@@ -21,6 +21,7 @@ This repository contains a manuscript, figures, analysis scripts, and lightweigh
 - Observation-constrained interpolation reaches about 70% exact class agreement only for all withheld reporting stations at roughly 57.4 retained stations per 10,000 km2.
 - That 57.4 stations per 10,000 km2 benchmark is not a sufficient condition for strong-motion reconstruction: in the highest-density bin, exact class accuracy is only 0.45-0.46 for I>=5 lower and 0.37-0.39 for I>=6 lower.
 - The 80% and 90% exact-class criteria are not reached within the tested density range, implying that density increase alone is insufficient under the present workflow.
+- Resampling 85 recent 2011-2022 events with maximum JMA intensity 5 upper or larger to the 1994 year-end station geometry gives a median maximum-intensity reduction of 0.9 units; 83.5% drop by at least one intensity class.
 - A counterfactual analysis of the 2018 northern Osaka earthquake shows that resampling the modern network to the 1994 active-site geometry reduces the 100-km station count from 465 to 34 and lowers exact class accuracy from 0.877 to 0.544.
 
 ## Repository Layout
@@ -72,6 +73,7 @@ The main workflow scripts are:
 - `src/analyze_station_thinning_interpolation.py`: station-thinning cross validation.
 - `src/plot_observed_predicted_intensity_scatter.py`: plots observed-versus-predicted intensity diagnostics for validation points.
 - `src/resolve_final_analysis_concerns.py`: final sensitivity and uncertainty checks.
+- `src/analyze_recent_1994_network_max_intensity.py`: maximum-intensity counterfactual for recent strong events under the 1994 year-end station geometry.
 - `src/analyze_osaka_2018_network_counterfactual.py`: 2018 northern Osaka network-density counterfactual.
 
 The exact local paths used during development are not required by the repository design; users should place raw data under a local `data/` directory and write regenerated outputs under `outputs/`.

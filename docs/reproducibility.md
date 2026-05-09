@@ -6,9 +6,7 @@ This note records the analysis settings behind the manuscript revision. Large ra
 
 - Repository: `https://github.com/SugiyamaMitsuki/jma-intensity-network-analysis`
 - Branch used for the manuscript revision: `main`
-- Parent commit before the current review-response revision: `684f8fbe034515cbb3f4bd64c9210a7d409a38e7`
-- Manuscript/statistics revision after this review response: `e06e8fc1718b85aecc0893682129ad430f421c15`
-- Note: the subsequent metadata-only commit records this fixed revision identifier in the reproducibility note.
+- Revision note: this document belongs to the manuscript version that adds the 1994 year-end maximum-intensity counterfactual for recent strong events. Use `git rev-parse HEAD` after checkout to record the exact repository revision in a submitted supplement or archive.
 
 ## Environment
 
@@ -162,6 +160,14 @@ python src/analyze_osaka_2018_network_counterfactual.py \
   --methods gmpe_raw,idw,kriging,gmpe_kriging \
   --map-method gmpe_kriging \
   --min-station-intensity 1.0
+
+python src/analyze_recent_1994_network_max_intensity.py \
+  --target-events-csv outputs/csv/hypocenter_catalog/target_events_intensity_5upper_plus_with_hypocenter.csv \
+  --recent-start-year 2011 \
+  --recent-end-year 2022 \
+  --counterfactual-year 1994 \
+  --match-radius-km 10 \
+  --min-station-intensity 1.0
 ```
 
 ## Key Analysis Settings
@@ -184,6 +190,10 @@ python src/analyze_osaka_2018_network_counterfactual.py \
 | Intensity clipping range | `0.0` to `7.2` |
 | Osaka counterfactual year | `1994` |
 | Osaka station assignment radius | `10 km` |
+| Recent-event maximum-intensity counterfactual years | `2011-2022` |
+| Recent-event target threshold | Maximum JMA intensity `5 upper` or larger |
+| Recent-event counterfactual geometry | Stations active at `1994-12-31 23:59 JST` |
+| Recent-event pseudo-observation assignment radius | `10 km` |
 
 ## Interpretation Constraints
 

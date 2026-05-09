@@ -16,6 +16,7 @@ This repository includes only lightweight derived CSV tables needed to inspect t
 - `data/derived/gmpe_vs_spatial_interpolation_effective0/`
 - `data/derived/station_thinning_interpolation_6lower_plus_class/`
 - `data/derived/osaka_2018_network_counterfactual/`
+- `data/derived/recent_1994_network_counterfactual/`
 - `data/raw_data_manifest_sha256.csv`
 
 These files are small derived summaries. They are not a substitute for the raw JMA intensity catalog, JMA hypocenter catalog, or J-SHIS surface-ground grid.
