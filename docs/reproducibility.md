@@ -6,8 +6,8 @@ This note records the analysis settings behind the manuscript revision. Large ra
 
 - Repository: `https://github.com/SugiyamaMitsuki/jma-intensity-network-analysis`
 - Branch used for the manuscript revision: `main`
-- Parent commit before the review-response revision: `0093442`
-- Exact revision after cloning: run `git rev-parse HEAD`
+- Parent commit before the current review-response revision: `684f8fbe034515cbb3f4bd64c9210a7d409a38e7`
+- Exact manuscript revision: see the current repository commit after applying this review-response update. This file is updated before the final commit; the fixed hash should be obtained with `git rev-parse HEAD` after cloning.
 
 ## Environment
 
@@ -31,10 +31,20 @@ Key packages observed in the local environment were:
 | pygmt | 0.17.0 |
 | shapely | 2.1.2 |
 | cartopy | 0.25.0 |
+| pyproj | 3.7.2 |
+| netCDF4 | 1.7.4 |
+| h5py | 3.15.1 |
+| ObsPy | 1.4.2 |
+| geopy | 2.4.1 |
+| numba | 0.63.1 |
+| imageio | 2.37.0 |
+| GMT | 6.6.0 |
+| Ghostscript | 10.06.0 |
+| FFmpeg | 7.1.1 |
 
 ## Raw Data Sources
 
-Expected local files are described in [data/README.md](../data/README.md). Raw data should be obtained from the original providers and stored under a local `data/` directory.
+Expected local files are described in [data/README.md](../data/README.md). Raw data should be obtained from the original providers and stored under a local `data/` directory. A fixed local-file inventory for the present revision is stored in [data/raw_data_manifest_sha256.csv](../data/raw_data_manifest_sha256.csv).
 
 | Dataset | Source | Notes |
 | --- | --- | --- |
@@ -50,6 +60,8 @@ Record raw-data checksums after download:
 find data -type f \( -name '*.zip' -o -name '*.dat' -o -name '*.csv' -o -name '*.txt' \) \
   -print | sort | xargs shasum -a 256 > data/raw_checksums_sha256.txt
 ```
+
+The raw-file manifest committed with this revision records checksums and local file timestamps on 2026-05-09 JST. Some older local acquisition dates were not machine-logged before this review response, so the manifest fixes the local analysis archive but does not reconstruct provider-side download dates for every file.
 
 ## Main Analysis Order
 
@@ -88,6 +100,26 @@ python src/analyze_station_thinning_interpolation.py \
   --kriging-nugget 0.02 \
   --gmpe-fault-type crustal
 
+python src/analyze_station_thinning_interpolation.py \
+  --target-events-csv outputs/csv/hypocenter_catalog/target_events_intensity_6lower_plus_with_hypocenter.csv \
+  --event-id all-targets \
+  --csv-dir outputs/csv/station_thinning_interpolation_6lower_plus_class \
+  --png-dir outputs/png/station_thinning_interpolation_6lower_plus_class \
+  --methods gmpe_raw,gmpe_calibrated,idw,kriging,gmpe_kriging \
+  --keep-fractions 0.1,0.2,0.3,0.5,0.7,0.9 \
+  --n-random 5 \
+  --seed 20260509 \
+  --min-station-intensity 1.0 \
+  --region-padding-deg 0.55 \
+  --kriging-nugget 0.02 \
+  --gmpe-fault-type crustal
+
+python src/prepare_review_response_statistics.py \
+  --predictions outputs/csv/station_thinning_interpolation_6lower_plus_class/thinning_prediction_errors.csv.gz \
+  --out-dir data/derived/station_thinning_interpolation_6lower_plus_class \
+  --bootstrap 5000 \
+  --seed 20260509
+
 python src/analyze_intensity_dependent_predictability.py \
   --predictions outputs/csv/station_thinning_predictions_effective0.csv
 
@@ -113,7 +145,7 @@ python src/analyze_osaka_2018_network_counterfactual.py \
 
 | Setting | Value |
 | --- | --- |
-| Target events for interpolation | Events with maximum JMA intensity 6 upper or 7 in the parsed catalog |
+| Target events for interpolation | Events with maximum JMA intensity 6 lower or larger in the parsed catalog |
 | Station-thinning seed | `20260509` |
 | Retained fractions | `0.1,0.2,0.3,0.5,0.7,0.9` |
 | Random draws per fraction | `5` |
@@ -130,6 +162,6 @@ python src/analyze_osaka_2018_network_counterfactual.py \
 
 ## Interpretation Constraints
 
-The 57.7 stations per 10,000 km2 benchmark is defined as an effective retained-station density in event-specific evaluation regions. It is not a nationwide operating density. It is also an all-withheld-reporting-station point-validation result; it is not a sufficient condition for reproducing strong-motion footprints.
+The 57.4 stations per 10,000 km2 benchmark is defined as an effective retained-station density in event-specific evaluation regions. It is not a nationwide operating density. It is also an all-withheld-reporting-station point-validation result; it is not a sufficient condition for reproducing strong-motion footprints.
 
 The `gmpe_*` method names are retained for code compatibility. In the manuscript, `gmpe_raw` is interpreted as a simplified Si and Midorikawa-type attenuation baseline because finite-fault distance, event-specific rupture geometry, and the published aleatory variability of a full GMPE are not yet represented.

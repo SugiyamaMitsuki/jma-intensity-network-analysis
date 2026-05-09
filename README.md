@@ -15,11 +15,11 @@ This repository contains a manuscript, figures, analysis scripts, and lightweigh
 
 ## Main Findings
 
-- The post-1995 expansion of the seismic-intensity network increases the probability of observing strong shaking near the epicenter, raising reported maximum intensity for comparable events.
+- The post-1995 expansion of the seismic-intensity network shortened nearest reporting-station distances; this is consistent with higher reported maximum intensity for comparable event groups.
 - The within-event mean over reporting stations can decrease after network expansion because many more distant, low-intensity observations enter the event average.
-- Treating zero retained stations as a simplified attenuation baseline gives an exact JMA intensity-class hit rate of 0.455 for all withheld reporting stations in the 22 target events with maximum intensity 6 upper or 7.
-- Observation-constrained interpolation reaches about 70% exact class agreement only for all withheld reporting stations at roughly 57.7 retained stations per 10,000 km2.
-- That 57.7 stations per 10,000 km2 benchmark is not a sufficient condition for strong-motion reconstruction: in the highest-density bin, exact class accuracy is only 0.39-0.46 for I>=5 lower and 0.37-0.39 for I>=6 lower.
+- Treating zero retained stations as a simplified attenuation baseline gives an exact JMA intensity-class hit rate of 0.467 for all withheld reporting stations in the 63 target events with maximum intensity 6 lower or larger.
+- Observation-constrained interpolation reaches about 70% exact class agreement only for all withheld reporting stations at roughly 57.4 retained stations per 10,000 km2.
+- That 57.4 stations per 10,000 km2 benchmark is not a sufficient condition for strong-motion reconstruction: in the highest-density bin, exact class accuracy is only 0.45-0.46 for I>=5 lower and 0.37-0.39 for I>=6 lower.
 - The 80% and 90% exact-class criteria are not reached within the tested density range, implying that density increase alone is insufficient under the present workflow.
 - A counterfactual analysis of the 2018 northern Osaka earthquake shows that resampling the modern network to the 1994 active-site geometry reduces the 100-km station count from 465 to 34 and lowers exact class accuracy from 0.877 to 0.544.
 
@@ -45,6 +45,12 @@ The analysis uses the following external/public sources:
 - A prefectural boundary GMT file used only for map rendering.
 
 The repository includes only lightweight derived summaries. Raw JMA/J-SHIS data and large generated grids should be downloaded or regenerated separately.
+
+## Related Study
+
+This work builds on the observation-network interpretation problem discussed by:
+
+- Sugiyama, M., Yoshioka, Y., Hirai, T., and Fukuwa, N. (2020). 震度観測体制の年代差・地域差の定量評価と震度情報の解釈. Journal of Japan Association for Earthquake Engineering, 20(7), 7_101-7_119. https://doi.org/10.5610/jaee.20.7_101
 
 ## Reproduction Notes
 

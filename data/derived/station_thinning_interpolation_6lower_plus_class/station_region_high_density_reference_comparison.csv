@@ -1,0 +1,13 @@
+station_region,method,n_predictions,exact_class_accuracy,rmse,accuracy_gain_points_vs_raw,rmse_reduction_fraction_vs_raw,comparison_note
+Hokkaido,gmpe_raw,42938,0.4364432437467977,0.8116808234503814,0.0,0.0,raw_all_validation_points
+Hokkaido,kriging,749,0.7009345794392523,0.39784680811576173,0.2644913356924546,0.5098482105015724,kriging_high_density_vs_raw_region_reference
+Tohoku,gmpe_raw,170695,0.4659128855561088,0.7240014078282321,0.0,0.0,raw_all_validation_points
+Tohoku,kriging,4837,0.6785197436427538,0.3891140254808713,0.21260685808664498,0.46255073364002647,kriging_high_density_vs_raw_region_reference
+Kanto,gmpe_raw,254492,0.46842336890747055,0.7317962730161206,0.0,0.0,raw_all_validation_points
+Kanto,kriging,9580,0.7554279749478079,0.3148216728453486,0.28700460604033734,0.569796015019588,kriging_high_density_vs_raw_region_reference
+Chubu-Hokuriku,gmpe_raw,256848,0.38115539151560457,0.8758913884868803,0.0,0.0,raw_all_validation_points
+Chubu-Hokuriku,kriging,10475,0.7108353221957041,0.36983060582074295,0.32967993068009954,0.5777665922031354,kriging_high_density_vs_raw_region_reference
+Kinki-Chugoku-Shikoku,gmpe_raw,143326,0.4900785621589942,0.6653974803062023,0.0,0.0,raw_all_validation_points
+Kinki-Chugoku-Shikoku,kriging,4351,0.7078832452309813,0.3692466057551952,0.21780468307198714,0.44507363390484217,kriging_high_density_vs_raw_region_reference
+Kyushu,gmpe_raw,89481,0.4384953230294699,0.766316906323885,0.0,0.0,raw_all_validation_points
+Kyushu,kriging,2318,0.6596203623813632,0.4207789449711859,0.22112503935189332,0.4509073967978686,kriging_high_density_vs_raw_region_reference

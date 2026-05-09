@@ -11,7 +11,9 @@ This repository includes only lightweight derived CSV tables needed to inspect t
 - `data/derived/station_network_transition_analysis.csv`
 - `data/derived/period_magbin_summary_land_approx_depth20.csv`
 - `data/derived/gmpe_vs_spatial_interpolation_effective0/`
+- `data/derived/station_thinning_interpolation_6lower_plus_class/`
 - `data/derived/osaka_2018_network_counterfactual/`
+- `data/raw_data_manifest_sha256.csv`
 
 These files are small derived summaries. They are not a substitute for the raw JMA intensity catalog, JMA hypocenter catalog, or J-SHIS surface-ground grid.
 
@@ -51,3 +53,5 @@ Scripts write derived outputs to `outputs/csv/`, `outputs/png/`, and `outputs/ma
 ## Reproducibility Metadata
 
 The manuscript revision uses random station thinning with seed `20260509`, a minimum station intensity of `1.0`, event-region padding of `0.55` degrees, and smoothing kriging with nugget `0.02` unless otherwise noted. See [`../docs/reproducibility.md`](../docs/reproducibility.md) for the command order, key options, raw-data source URLs, and checksum workflow.
+
+`data/raw_data_manifest_sha256.csv` records local raw-file names, byte counts, modification timestamps, source URLs, and SHA-256 checksums for the local archive used in this manuscript revision. The original download timestamps for older local files were not logged before this revision, so the manifest should be read as a fixed local-file inventory rather than a provider-side acquisition log.

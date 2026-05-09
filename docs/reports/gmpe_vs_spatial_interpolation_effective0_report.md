@@ -1,5 +1,7 @@
 # 観測点0を簡略化距離減衰ベースラインとした推計震度補間比較
 
+> 注: 本レポートは前段階の有効観測点0ベースライン検討を記録したアーカイブである。査読対応後の投稿原稿では，震度6弱以上を観測した63地震を対象に再集計した値を主結果として用いている。最新の投稿値は `paper/` の原稿および `data/derived/station_thinning_interpolation_6lower_plus_class/` を参照する。
+
 ## 要点
 
 - 観測点0状態は `gmpe_raw` と定義し、実効観測点数 `effective_n_train=0`、実効観測点密度 `effective_train_density_per_10000km2=0` に固定した。

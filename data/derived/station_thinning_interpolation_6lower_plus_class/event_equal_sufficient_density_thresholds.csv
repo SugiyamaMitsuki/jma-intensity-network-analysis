@@ -1,0 +1,10 @@
+method,criterion,density_per_10000km2,median_nn_km,exact_class_accuracy,status
+idw,event_equal_exact>=0.70,56.33009525308344,4.373829142097918,0.7107718178558802,reached
+idw,event_equal_exact>=0.80,,,,not_reached
+idw,event_equal_exact>=0.90,,,,not_reached
+kriging,event_equal_exact>=0.70,56.33009525308344,4.373829142097918,0.7040270894207635,reached
+kriging,event_equal_exact>=0.80,,,,not_reached
+kriging,event_equal_exact>=0.90,,,,not_reached
+gmpe_kriging,event_equal_exact>=0.70,56.33009525308344,4.373829142097918,0.7043877306342227,reached
+gmpe_kriging,event_equal_exact>=0.80,,,,not_reached
+gmpe_kriging,event_equal_exact>=0.90,,,,not_reached
