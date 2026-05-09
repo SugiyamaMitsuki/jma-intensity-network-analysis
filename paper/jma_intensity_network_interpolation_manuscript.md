@@ -157,13 +157,17 @@ This period comparison indicates that maximum intensity and the reporting-statio
 
 ### 4.2 Surface-site information provides a necessary but incomplete correction
 
-The J-SHIS AVS30 and amplification maps show strong regional structure: low-velocity and high-amplification zones are concentrated in major sedimentary basins, plains, and reclaimed/coastal lowlands, whereas mountainous areas are generally higher velocity and lower amplification. Applying the amplification correction before interpolation materially improves physical consistency, because the interpolation target is a bedrock-referenced field rather than a mixture of path, source, and local site effects.
+The J-SHIS AVS30 and amplification maps show strong regional structure: low-velocity and high-amplification zones are concentrated in major sedimentary basins, plains, and reclaimed/coastal lowlands, whereas mountainous areas are generally higher velocity and lower amplification. Applying the amplification correction before interpolation materially improves physical consistency, because the interpolation target is a bedrock-referenced field rather than a mixture of path, source, and local site effects. We also mapped local spatial heterogeneity of site conditions as proxy indicators of interpolation difficulty, using local standard deviation, coefficient of variation, and spatial gradient diagnostics.
 
 ![Figure 4a. J-SHIS AVS30 map.](assets_en/fig04a_jshis_avs30.png)
 
 ![Figure 4b. J-SHIS surface amplification factor map.](assets_en/fig04b_jshis_amplification.png)
 
 *Figure 4. Surface-site information used in this study. AVS30 and engineering-bedrock-to-surface amplification are used to remove and restore site effects during interpolation.*
+
+![Figure 4c. Spatial heterogeneity diagnostics for J-SHIS site conditions.](assets_en/fig04c_jshis_ground_variability_metrics.png)
+
+*Figure 4c. Spatial heterogeneity diagnostics derived from J-SHIS surface-site data: local 20 km standard deviation of the intensity-equivalent site term 1.72 log10(A), local coefficient of variation of amplification factor A, local 20 km standard deviation of AVS30, and the spatial gradient of the site term. These are proxy indicators of interpolation difficulty, not direct measures of nonlinear site response during strong shaking.*
 
 ### 4.3 The simplified attenuation baseline is a zero-station reference
 

@@ -83,6 +83,12 @@ python src/plot_jshis_surface_ground_pygmt.py \
   --csv-dir outputs/csv \
   --png-dir outputs/png
 
+python src/plot_jshis_ground_variability_pygmt.py \
+  --grid-csv outputs/csv/jshis_surface_ground/jshis_surface_ground_grid_0p02deg.csv \
+  --csv-dir outputs/csv/jshis_ground_variability \
+  --png-dir outputs/png/jshis_ground_variability \
+  --radius-km 20
+
 python src/plot_station_network_comparison_pygmt.py \
   --data-dir data \
   --first-year 1994 \
@@ -163,6 +169,7 @@ python src/analyze_osaka_2018_network_counterfactual.py \
 | Minimum reported station intensity | `1.0` |
 | Event-region padding | `0.55` degrees |
 | Site amplification intensity coefficient | `1.72` |
+| J-SHIS site-heterogeneity window | `20 km` circular window on the 0.02-degree aggregated grid |
 | IDW neighbors / power | `16` / `2.0` |
 | Kriging nugget | `0.02` |
 | Default attenuation fault type | `crustal` |
