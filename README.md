@@ -20,7 +20,7 @@ This repository contains a manuscript, figures, analysis scripts, and lightweigh
 - Treating zero retained stations as attenuation-only prediction gives an exact JMA intensity-class hit rate of 0.455 for the 22 target events with maximum intensity 6 upper or 7.
 - Observation-constrained interpolation reaches about 70% exact class agreement only at roughly 57.7 retained stations per 10,000 km2.
 - The 80% and 90% exact-class criteria are not reached within the tested density range, implying that density increase alone is insufficient under the present workflow.
-- A counterfactual analysis of the 2018 northern Osaka earthquake shows that resampling the modern network to the 1995 active-site geometry reduces the 100-km station count from 465 to 59 and lowers exact class accuracy from 0.877 to 0.572.
+- A counterfactual analysis of the 2018 northern Osaka earthquake shows that resampling the modern network to the 1994 active-site geometry reduces the 100-km station count from 465 to 34 and lowers exact class accuracy from 0.877 to 0.544.
 
 ## Repository Layout
 

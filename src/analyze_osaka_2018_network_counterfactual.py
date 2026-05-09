@@ -44,8 +44,8 @@ INTENSITY_THRESHOLDS = [4.5, 5.0, 5.5, 6.0, 6.5]
 RADII_KM = [10.0, 20.0, 50.0, 100.0]
 SCENARIO_LABELS = {
     "current_2018_observed": "2018 observed network",
-    "counterfactual_1995_active": "1995 active-site geometry",
-    "strict_1995_code_overlap": "Strict 1995 code overlap",
+    "counterfactual_1994_active": "1994 active-site geometry",
+    "strict_1994_code_overlap": "Strict 1994 code overlap",
 }
 
 
@@ -64,7 +64,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--manuscript-assets-ja", type=Path, default=DEFAULT_MANUSCRIPT_ASSETS_JA)
     parser.add_argument("--manuscript-assets-en", type=Path, default=DEFAULT_MANUSCRIPT_ASSETS_EN)
     parser.add_argument("--event-id", default="i2018_000842")
-    parser.add_argument("--counterfactual-year", type=int, default=1995)
+    parser.add_argument("--counterfactual-year", type=int, default=1994)
     parser.add_argument("--radius-km", type=float, default=100.0)
     parser.add_argument("--map-radius-km", type=float, default=115.0)
     parser.add_argument("--match-radius-km", type=float, default=10.0)
@@ -461,13 +461,13 @@ def plot_map_comparison(
     import matplotlib.pyplot as plt
 
     current = grids[("current_2018_observed", method)]
-    counter = grids[("counterfactual_1995_active", method)]
+    counter = grids[("counterfactual_1994_active", method)]
     merged = current[["longitude", "latitude", "estimated_surface_intensity"]].merge(
         counter[["longitude", "latitude", "estimated_surface_intensity"]],
         on=["longitude", "latitude"],
-        suffixes=("_current", "_1995"),
+        suffixes=("_current", "_1994"),
     )
-    merged["difference"] = merged["estimated_surface_intensity_1995"] - merged["estimated_surface_intensity_current"]
+    merged["difference"] = merged["estimated_surface_intensity_1994"] - merged["estimated_surface_intensity_current"]
     merged["log10_pgv_ratio"] = merged["difference"] / intensity_to_log10_pgv_coef
     lons, lats, current_arr = pivot_grid(current)
     _, _, counter_arr = pivot_grid(counter)
@@ -479,7 +479,7 @@ def plot_map_comparison(
     image0 = None
     for ax, arr, scenario, title in [
         (axes[0], current_arr, "current_2018_observed", "2018 observed network"),
-        (axes[1], counter_arr, "counterfactual_1995_active", "1995 active-site geometry"),
+        (axes[1], counter_arr, "counterfactual_1994_active", "1994 active-site geometry"),
     ]:
         image0 = ax.pcolormesh(lons, lats, arr, cmap=cmap_intensity, vmin=0.0, vmax=7.0, shading="nearest")
         ax.contour(lons, lats, arr, levels=levels, colors="white", linewidths=0.45, alpha=0.85)
@@ -515,7 +515,7 @@ def plot_map_comparison(
     )
     draw_boundaries(axes[3], region)
     axes[3].scatter([event.longitude], [event.latitude], marker="*", s=72, c="#111111", edgecolors="white", linewidths=0.45, zorder=6)
-    axes[3].set_title("Equivalent PGV ratio\n1995/current", fontsize=8.2)
+    axes[3].set_title("Equivalent PGV ratio\n1994/current", fontsize=8.2)
     setup_map_axis(axes[3], region, event)
     fig.colorbar(image0, ax=axes[:2], location="bottom", fraction=0.05, pad=0.08, label="Estimated JMA instrumental intensity")
     fig.colorbar(image2, ax=axes[2], location="bottom", fraction=0.05, pad=0.08, label="Difference")
@@ -524,7 +524,7 @@ def plot_map_comparison(
     ratio_bar.set_ticks(ratio_ticks)
     ratio_bar.set_ticklabels(["0.25", "0.5", "1", "2", "4"])
     fig.suptitle("2018 Northern Osaka earthquake: network-density counterfactual", fontsize=9.5, fontweight="bold")
-    out = png_dir / "osaka_2018_current_vs_1995_gmpe_kriging_maps.png"
+    out = png_dir / "osaka_2018_current_vs_1994_gmpe_kriging_maps.png"
     fig.savefig(out, bbox_inches="tight")
     plt.close(fig)
     return out
@@ -542,8 +542,8 @@ def plot_summary(
     fig, axes = plt.subplots(1, 3, figsize=(10.2, 3.05), constrained_layout=True)
     colors = {
         "current_2018_observed": "#1f77b4",
-        "counterfactual_1995_active": "#d62728",
-        "strict_1995_code_overlap": "#6b6b6b",
+        "counterfactual_1994_active": "#d62728",
+        "strict_1994_code_overlap": "#6b6b6b",
     }
     for _, row in station_summary.iterrows():
         scenario = row["scenario"]
@@ -557,7 +557,7 @@ def plot_summary(
     axes[0].set_title("Network support")
 
     val = validation[(validation["method"] == method) & (validation["validation_subset"].isin(["all_I>=1", "I>=5.0", "I>=5.5"]))]
-    scenarios = ["current_2018_observed", "counterfactual_1995_active", "strict_1995_code_overlap"]
+    scenarios = ["current_2018_observed", "counterfactual_1994_active", "strict_1994_code_overlap"]
     x = np.arange(len(scenarios))
     width = 0.24
     for offset, subset in zip([-width, 0.0, width], ["all_I>=1", "I>=5.0", "I>=5.5"]):
@@ -567,7 +567,7 @@ def plot_summary(
             values.append(float(hit["class_accuracy"].iloc[0]) if not hit.empty else np.nan)
         axes[1].bar(x + offset, values, width=width, label=subset)
     axes[1].set_xticks(x)
-    axes[1].set_xticklabels(["2018", "1995 geom.", "strict"], rotation=0)
+    axes[1].set_xticklabels(["2018", "1994 geom.", "strict"], rotation=0)
     axes[1].set_ylim(0.0, 1.0)
     axes[1].set_ylabel("Class accuracy", fontsize=7.6)
     axes[1].grid(True, axis="y", color="#dddddd", linewidth=0.55)
@@ -679,7 +679,7 @@ def write_report(
         "",
         "## 推計震度分布の比較",
         "",
-        f"![2018 current network versus 1995 counterfactual]({map_rel})",
+        f"![2018 current network versus 1994 counterfactual]({map_rel})",
         "",
         "震度は線形振幅ではないため，主比較には震度差ΔIを用いる。",
         "右端の等価PGV比は `I = 2.68 + 1.72 log10(PGV)` に基づく参考換算であり，震度値そのものの比ではない。",
@@ -736,10 +736,10 @@ def main() -> None:
     strict = build_strict_overlap(current, args)
     scenarios = {
         "current_2018_observed": current,
-        "counterfactual_1995_active": counterfactual,
+        "counterfactual_1994_active": counterfactual,
     }
     if len(strict) >= 3:
-        scenarios["strict_1995_code_overlap"] = strict
+        scenarios["strict_1994_code_overlap"] = strict
 
     region = region_from_radius(event, args.map_radius_km)
     ground_all = load_ground_grid(args.ground_grid)
@@ -789,7 +789,7 @@ def main() -> None:
             grids[(scenario, method)] = grid
             if not args.no_pygmt_maps and method == args.map_method and scenario in {
                 "current_2018_observed",
-                "counterfactual_1995_active",
+                "counterfactual_1994_active",
             }:
                 draw_map(
                     event,
