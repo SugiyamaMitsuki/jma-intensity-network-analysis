@@ -3,13 +3,13 @@ title: "気象庁震度観測網の年代差が震度統計と推計震度分布
 target_journal_style: "Bulletin of the Seismological Society of America / Earthquake Spectra 相当の研究論文構成"
 manuscript_type: "Research Article"
 date: "2026-05-09"
-authors: "Mitsuki Sugiyama [所属・ORCID・責任著者情報を挿入]"
+authors: "Mitsuki Sugiyama [所属・ORCID・責任著者情報を挿入]; Codex"
 language: "Japanese"
 ---
 
 # 気象庁震度観測網の年代差が震度統計と推計震度分布に及ぼす影響：全検証観測点ベースの震度階級一致率からみた観測点密度の経験的評価
 
-**著者:** Mitsuki Sugiyama [所属，ORCID，責任著者連絡先を挿入]
+**著者:** Mitsuki Sugiyama [所属，ORCID，責任著者連絡先を挿入]; Codex
 
 ## 要旨
 
@@ -412,7 +412,7 @@ J-SHISのAVS30および地盤増幅率は，明瞭な地域構造を示す。低
 
 ## 謝辞
 
-[研究費，所属機関の支援，共同研究者への謝辞を挿入する。気象庁および防災科学技術研究所J-SHISをデータ提供機関として謝辞に含める。]
+本研究では，気象庁が公開する震度データおよび一元化震源データを使用した。また，防災科学技術研究所J-SHISが公開する表層地盤情報（AVS30および工学的基盤から地表への地盤増幅率）を使用した。これらのデータを継続的に整備・公開している気象庁および防災科学技術研究所に謝意を表する。
 
 ## 参考文献
 

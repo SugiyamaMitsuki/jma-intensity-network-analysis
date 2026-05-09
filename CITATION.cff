@@ -4,6 +4,7 @@ title: "Observation-Network Bias in JMA Seismic Intensity and Empirical Station-
 authors:
   - family-names: Sugiyama
     given-names: Mitsuki
+  - name: Codex
 date-released: "2026-05-09"
 url: "https://github.com/SugiyamaMitsuki/jma-intensity-network-analysis"
 abstract: "Manuscript, figures, scripts, and lightweight derived tables for analyzing observation-network effects in the JMA seismic-intensity catalog and empirical station-density effects on pointwise estimated-intensity class agreement."
@@ -13,5 +14,6 @@ preferred-citation:
   authors:
     - family-names: Sugiyama
       given-names: Mitsuki
+    - name: Codex
   year: 2026
   notes: "Manuscript in preparation."

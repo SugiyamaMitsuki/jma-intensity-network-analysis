@@ -70,7 +70,7 @@ See [`docs/reproducibility.md`](docs/reproducibility.md) for the command order a
 
 ## Authorship and AI Assistance
 
-Codex/OpenAI was used as an AI-assisted coding, analysis, and drafting tool. Codex should not be listed as an author because it cannot take responsibility for the work, approve the final manuscript, or be accountable for data integrity and interpretation. The responsible author should be the human researcher who validates and submits the work.
+The current manuscript lists Mitsuki Sugiyama and Codex as authors. Codex/OpenAI was used for coding, analysis support, figure/report preparation, and manuscript drafting. The human corresponding author should validate the data, analysis, interpretation, and final submission details before journal submission.
 
 Recommended repository citation is provided in [`CITATION.cff`](CITATION.cff). Update affiliations, ORCID, and corresponding-author information before journal submission.
 

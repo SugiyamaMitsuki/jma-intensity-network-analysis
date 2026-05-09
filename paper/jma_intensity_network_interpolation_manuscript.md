@@ -3,12 +3,12 @@ title: "Observation-Network Bias in JMA Seismic Intensity and Empirical Station-
 target_journal_style: "Bulletin of the Seismological Society of America / Earthquake Spectra"
 manuscript_type: "Research Article"
 date: "2026-05-09"
-authors: "Mitsuki Sugiyama [affiliation, ORCID, and corresponding author information to be inserted]"
+authors: "Mitsuki Sugiyama [affiliation, ORCID, and corresponding author information to be inserted]; Codex"
 ---
 
 # Observation-Network Bias in JMA Seismic Intensity and Empirical Station-Density Effects on Pointwise Intensity-Class Interpolation
 
-**Authors:** Mitsuki Sugiyama [affiliation, ORCID, and corresponding author information to be inserted]
+**Authors:** Mitsuki Sugiyama [affiliation, ORCID, and corresponding author information to be inserted]; Codex
 
 ## Abstract
 
@@ -396,7 +396,7 @@ This study has several limitations that should be addressed before journal submi
 
 ## Acknowledgments
 
-[Funding, institutional support, and collaborator acknowledgments to be inserted. JMA and NIED/J-SHIS are acknowledged as data providers.]
+This study used seismic-intensity data and unified hypocenter data published by the Japan Meteorological Agency (JMA). It also used J-SHIS surface-ground information, including AVS30 and engineering-bedrock-to-surface site amplification factors, published by the National Research Institute for Earth Science and Disaster Resilience (NIED). The authors thank JMA and NIED for maintaining and providing these datasets.
 
 ## References
 
