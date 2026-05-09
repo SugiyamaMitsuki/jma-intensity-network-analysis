@@ -2,6 +2,11 @@
 
 This repository contains a manuscript, figures, analysis scripts, and lightweight derived tables for a study of how the evolution of the Japan Meteorological Agency (JMA) seismic-intensity observation network affects long-term intensity statistics and estimated intensity distributions.
 
+## Read the Paper
+
+- [English manuscript](paper/jma_intensity_network_interpolation_manuscript.md)
+- [日本語版原稿](paper/jma_intensity_network_interpolation_manuscript_ja.md)
+
 ## Manuscript
 
 - English manuscript: [`paper/jma_intensity_network_interpolation_manuscript.md`](paper/jma_intensity_network_interpolation_manuscript.md)
