@@ -1,0 +1,21 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Local/raw data and large regenerated products
+data/raw/
+data/jma/
+data/j-shis/
+data/hypocenter/
+outputs/
+*.zip
+*.mp4
+*.mov
+
+# Large generated tables, if reproduced inside the repository
+*_prediction_errors.csv
+*_prediction_errors.csv.gz
+*trial_predictions*.csv
+*trial_predictions*.csv.gz
+*estimated_intensity_*.csv

@@ -1,0 +1,16 @@
+method,criterion,sufficient_density_per_10000km2,sufficient_median_train_nn_km,sufficient_class_accuracy,status
+gmpe_raw,median_class_accuracy>=0.70,,,,not_reached
+gmpe_raw,median_class_accuracy>=0.80,,,,not_reached
+gmpe_raw,median_class_accuracy>=0.90,,,,not_reached
+gmpe_calibrated,median_class_accuracy>=0.70,,,,not_reached
+gmpe_calibrated,median_class_accuracy>=0.80,,,,not_reached
+gmpe_calibrated,median_class_accuracy>=0.90,,,,not_reached
+idw,median_class_accuracy>=0.70,57.67957091090264,4.3487995530631345,0.7028627525492431,reached
+idw,median_class_accuracy>=0.80,,,,not_reached
+idw,median_class_accuracy>=0.90,,,,not_reached
+kriging,median_class_accuracy>=0.70,57.67957091090264,4.3487995530631345,0.7036129032258065,reached
+kriging,median_class_accuracy>=0.80,,,,not_reached
+kriging,median_class_accuracy>=0.90,,,,not_reached
+gmpe_kriging,median_class_accuracy>=0.70,57.67957091090264,4.3487995530631345,0.7034006539064097,reached
+gmpe_kriging,median_class_accuracy>=0.80,,,,not_reached
+gmpe_kriging,median_class_accuracy>=0.90,,,,not_reached

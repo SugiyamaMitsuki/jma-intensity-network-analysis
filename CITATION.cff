@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the manuscript or this repository."
+title: "Observation-Network Bias and Station-Density Requirements for Class-Preserving Interpolation of JMA Seismic Intensity"
+authors:
+  - family-names: Sugiyama
+    given-names: Mitsuki
+date-released: "2026-05-09"
+url: "https://github.com/SugiyamaMitsuki/jma-intensity-network-analysis"
+abstract: "Manuscript, figures, scripts, and lightweight derived tables for analyzing observation-network effects in the JMA seismic-intensity catalog and station-density requirements for class-preserving estimated intensity interpolation."
+preferred-citation:
+  type: article
+  title: "Observation-Network Bias and Station-Density Requirements for Class-Preserving Interpolation of JMA Seismic Intensity"
+  authors:
+    - family-names: Sugiyama
+      given-names: Mitsuki
+  year: 2026
+  notes: "Manuscript in preparation."

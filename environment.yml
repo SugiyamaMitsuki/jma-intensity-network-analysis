@@ -1,0 +1,15 @@
+name: seismo
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.11
+  - numpy
+  - pandas
+  - scipy
+  - matplotlib
+  - xarray
+  - pygmt
+  - shapely
+  - cartopy
+  - ffmpeg
+  - pip
