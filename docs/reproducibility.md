@@ -83,6 +83,15 @@ python src/plot_jshis_surface_ground_pygmt.py \
   --csv-dir outputs/csv \
   --png-dir outputs/png
 
+python src/plot_station_network_comparison_pygmt.py \
+  --data-dir data \
+  --first-year 1994 \
+  --first-month 12 \
+  --latest-year auto \
+  --latest-month 12 \
+  --output outputs/png/station_maps_pygmt/station_network_1994_vs_2022_year_end.png \
+  --csv data/derived/station_network_year_end_comparison.csv
+
 python src/estimate_jma_intensity_distribution.py \
   --methods gmpe_raw,idw,kriging,gmpe_kriging \
   --min-station-intensity 1.0 \
@@ -147,6 +156,7 @@ python src/analyze_osaka_2018_network_counterfactual.py \
 | Setting | Value |
 | --- | --- |
 | Target events for interpolation | Events with maximum JMA intensity 6 lower or larger in the parsed catalog |
+| Station-network comparison snapshots | `1994-12-31 23:59 JST` and latest analysis year-end (`2022-12-31 23:59 JST` locally) |
 | Station-thinning seed | `20260509` |
 | Retained fractions | `0.1,0.2,0.3,0.5,0.7,0.9` |
 | Random draws per fraction | `5` |

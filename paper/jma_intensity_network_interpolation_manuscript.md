@@ -151,6 +151,10 @@ This period comparison indicates that maximum intensity and the reporting-statio
 
 *Figure 3. The reporting network moved from sparse near-source sampling to much shorter nearest-station distances after the mid-1990s.*
 
+![Figure 3b. Active seismic-intensity station distributions at the end of 1994 and at the end of the latest analysis year.](assets_en/fig03b_station_network_1994_vs_2022.png)
+
+*Figure 3b. Comparison of active seismic-intensity station distributions. The left panel shows stations active at 23:59 JST on 31 December 1994, and the right panel shows stations active at 23:59 JST on 31 December 2022, the latest year used in this analysis. The snapshots are explicitly year-end states because station counts can differ between January and December of the same year.*
+
 ### 4.2 Surface-site information provides a necessary but incomplete correction
 
 The J-SHIS AVS30 and amplification maps show strong regional structure: low-velocity and high-amplification zones are concentrated in major sedimentary basins, plains, and reclaimed/coastal lowlands, whereas mountainous areas are generally higher velocity and lower amplification. Applying the amplification correction before interpolation materially improves physical consistency, because the interpolation target is a bedrock-referenced field rather than a mixture of path, source, and local site effects.

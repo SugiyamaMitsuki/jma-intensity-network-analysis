@@ -8,6 +8,7 @@ This repository includes only lightweight derived CSV tables needed to inspect t
 - `data/derived/yearly_shortest_epicentral_distance_m4plus_land_approx_depth20.csv`
 - `data/derived/station_network_density_selected_years.csv`
 - `data/derived/station_network_density_period_summary.csv`
+- `data/derived/station_network_year_end_comparison.csv`
 - `data/derived/station_network_transition_analysis.csv`
 - `data/derived/period_magbin_summary_land_approx_depth20.csv`
 - `data/derived/gmpe_vs_spatial_interpolation_effective0/`

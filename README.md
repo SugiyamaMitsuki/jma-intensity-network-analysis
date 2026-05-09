@@ -66,6 +66,7 @@ The main workflow scripts are:
 - `src/analyze_jma_intensity.py`: station-network and event-level intensity statistics.
 - `src/prepare_hypocenter_intensity_catalog.py`: merges intensity events with JMA hypocenter data.
 - `src/plot_jshis_surface_ground_pygmt.py`: maps J-SHIS AVS30 and site amplification.
+- `src/plot_station_network_comparison_pygmt.py`: maps active station snapshots for 1994 year-end and the latest analysis year-end.
 - `src/estimate_jma_intensity_distribution.py`: generates JMA-style estimated intensity fields.
 - `src/analyze_station_thinning_interpolation.py`: station-thinning cross validation.
 - `src/resolve_final_analysis_concerns.py`: final sensitivity and uncertainty checks.
