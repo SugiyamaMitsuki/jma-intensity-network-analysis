@@ -3,12 +3,12 @@ title: "Observation-Network Bias in JMA Seismic Intensity and Empirical Station-
 target_journal_style: "Bulletin of the Seismological Society of America / Earthquake Spectra"
 manuscript_type: "Research Article"
 date: "2026-05-09"
-authors: "Mitsuki Sugiyama [affiliation, ORCID, and corresponding author information to be inserted]; Codex"
+authors: "Mitsuki Sugiyama; Codex"
 ---
 
 # Observation-Network Bias in JMA Seismic Intensity and Empirical Station-Density Effects on Pointwise Intensity-Class Interpolation
 
-**Authors:** Mitsuki Sugiyama [affiliation, ORCID, and corresponding author information to be inserted]; Codex
+**Authors:** Mitsuki Sugiyama; Codex
 
 ## Abstract
 
