@@ -7,7 +7,8 @@ This note records the analysis settings behind the manuscript revision. Large ra
 - Repository: `https://github.com/SugiyamaMitsuki/jma-intensity-network-analysis`
 - Branch used for the manuscript revision: `main`
 - Parent commit before the current review-response revision: `684f8fbe034515cbb3f4bd64c9210a7d409a38e7`
-- Exact manuscript revision: see the current repository commit after applying this review-response update. This file is updated before the final commit; the fixed hash should be obtained with `git rev-parse HEAD` after cloning.
+- Manuscript/statistics revision after this review response: `e06e8fc1718b85aecc0893682129ad430f421c15`
+- Note: the subsequent metadata-only commit records this fixed revision identifier in the reproducibility note.
 
 ## Environment
 
