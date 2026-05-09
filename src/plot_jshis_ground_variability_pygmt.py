@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import gzip
+import io
 import math
 import shutil
 from pathlib import Path
@@ -123,8 +124,10 @@ def flatten_metrics(lat: np.ndarray, lon: np.ndarray, arrays: dict[str, np.ndarr
 
 def write_gzip_csv(df: pd.DataFrame, path: Path) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    with gzip.open(path, "wt", encoding="utf-8", newline="") as f:
-        df.to_csv(f, index=False, float_format="%.6g")
+    with path.open("wb") as raw:
+        with gzip.GzipFile(fileobj=raw, mode="wb", mtime=0) as gz:
+            with io.TextIOWrapper(gz, encoding="utf-8", newline="") as f:
+                df.to_csv(f, index=False, float_format="%.6g")
 
 
 def panel(
@@ -206,20 +209,29 @@ def draw_maps(
         COLOR_NAN="white",
     ):
         fig = pygmt.Figure()
-        with fig.subplot(nrows=2, ncols=2, figsize=("19.0c", "16.3c"), margins=["1.18c", "1.08c"]):
-            for idx, (key, title, cmap, series, colorbar_label) in enumerate(specs):
-                with fig.set_panel(panel=idx):
-                    panel(
-                        fig,
-                        pygmt,
-                        grids[key],
-                        region=region,
-                        title=title,
-                        cmap=cmap,
-                        series=series,
-                        colorbar_label=colorbar_label,
-                        prefecture_boundary=prefecture_boundary,
-                    )
+        # Manual panel origins keep the map frames identical in every panel.
+        # PyGMT subplot includes exterior elements such as colorbars in panel
+        # sizing, which can make graticules appear offset across a composite.
+        positions = [(0.0, 0.0), (10.2, 0.0), (0.0, -9.3), (10.2, -9.3)]
+        current_x = 0.0
+        current_y = 0.0
+        for idx, (key, title, cmap, series, colorbar_label) in enumerate(specs):
+            x, y = positions[idx]
+            if idx:
+                fig.shift_origin(xshift=f"{x - current_x}c", yshift=f"{y - current_y}c")
+            panel(
+                fig,
+                pygmt,
+                grids[key],
+                region=region,
+                title=title,
+                cmap=cmap,
+                series=series,
+                colorbar_label=colorbar_label,
+                prefecture_boundary=prefecture_boundary,
+            )
+            current_x = x
+            current_y = y
         fig.savefig(output_path, crop=True, dpi=420)
 
 
