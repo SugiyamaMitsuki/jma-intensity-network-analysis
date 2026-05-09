@@ -136,6 +136,13 @@ python src/prepare_review_response_statistics.py \
   --bootstrap 5000 \
   --seed 20260509
 
+python src/plot_observed_predicted_intensity_scatter.py \
+  --predictions outputs/csv/station_thinning_interpolation_6lower_plus_class/thinning_prediction_errors.csv.gz \
+  --csv-dir outputs/csv/observed_predicted_intensity \
+  --png-dir outputs/png/observed_predicted_intensity \
+  --high-density-min 50 \
+  --high-density-max 75
+
 python src/analyze_intensity_dependent_predictability.py \
   --predictions outputs/csv/station_thinning_predictions_effective0.csv
 

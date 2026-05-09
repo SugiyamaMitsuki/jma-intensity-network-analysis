@@ -12,6 +12,7 @@ This repository includes only lightweight derived CSV tables needed to inspect t
 - `data/derived/station_network_transition_analysis.csv`
 - `data/derived/period_magbin_summary_land_approx_depth20.csv`
 - `data/derived/jshis_ground_variability_metrics_0p02deg.csv.gz`
+- `data/derived/observed_predicted_intensity_scatter_summary.csv`
 - `data/derived/gmpe_vs_spatial_interpolation_effective0/`
 - `data/derived/station_thinning_interpolation_6lower_plus_class/`
 - `data/derived/osaka_2018_network_counterfactual/`

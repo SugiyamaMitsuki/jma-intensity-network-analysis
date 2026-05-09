@@ -70,6 +70,7 @@ The main workflow scripts are:
 - `src/plot_station_network_comparison_pygmt.py`: maps active station snapshots for 1994 year-end and the latest analysis year-end.
 - `src/estimate_jma_intensity_distribution.py`: generates JMA-style estimated intensity fields.
 - `src/analyze_station_thinning_interpolation.py`: station-thinning cross validation.
+- `src/plot_observed_predicted_intensity_scatter.py`: plots observed-versus-predicted intensity diagnostics for validation points.
 - `src/resolve_final_analysis_concerns.py`: final sensitivity and uncertainty checks.
 - `src/analyze_osaka_2018_network_counterfactual.py`: 2018 northern Osaka network-density counterfactual.
 

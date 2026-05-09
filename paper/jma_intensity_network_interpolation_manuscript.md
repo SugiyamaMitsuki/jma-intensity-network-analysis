@@ -227,6 +227,12 @@ As a sensitivity analysis for event weighting, we also computed density-bin accu
 
 *Figure 5. Exact intensity-class hit rate versus effective station density. The zero-density point is the simplified attenuation baseline. The main interpolation methods reach the 70% criterion for all withheld reporting stations, but this is not a sufficient condition for strong-motion reconstruction. The 80% and 90% criteria are not reached within the tested density range.*
 
+Figure 5b directly compares observed and predicted intensity. The gray hexagons show the density of all withheld stations, the pale diagonal blocks show exact intensity-class agreement, the black line is the 1:1 line, and the dotted lines mark ±0.5 in continuous intensity. When withheld stations with intensity 5 lower or larger are overlaid, red underpredicted points remain below the diagonal even in the highest-density bin, visually confirming the smoothing of local high-intensity peaks.
+
+![Figure 5b. Observed-versus-predicted intensity scatter plot.](assets_en/fig05b_observed_predicted_intensity_scatter.png)
+
+*Figure 5b. Observed versus predicted intensity. The upper-left panel is the simplified attenuation baseline corresponding to zero retained stations; the other panels show the main interpolation methods in the highest-density bin (50-75 stations per 10,000 km2). Colored points mark withheld stations with observed intensity 5 lower or larger: red denotes class underprediction, blue exact class agreement, and orange overprediction.*
+
 **Table 4. High-density interpolation accuracy by validation-intensity subset.**
 
 | Validation subset | Method | n | MAE | RMSE | Exact class | 95% CI | Underprediction |
