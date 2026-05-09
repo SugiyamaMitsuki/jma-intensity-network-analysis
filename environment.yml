@@ -2,14 +2,25 @@ name: seismo
 channels:
   - conda-forge
 dependencies:
-  - python>=3.11
-  - numpy
-  - pandas
-  - scipy
-  - matplotlib
-  - xarray
-  - pygmt
-  - shapely
-  - cartopy
+  - python=3.11
+  - numpy=1.26.*
+  - pandas=2.2.*
+  - scipy=1.17.*
+  - matplotlib=3.10.*
+  - xarray=2026.2.*
+  - pygmt=0.17.*
+  - shapely=2.1.*
+  - cartopy=0.25.*
+  - pyproj
+  - netcdf4
+  - h5py
+  - obspy
+  - geopy
+  - numba
+  - imageio
+  - gmt
+  - ghostscript
   - ffmpeg
+  - jupyterlab
+  - ipykernel
   - pip

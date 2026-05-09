@@ -16,9 +16,10 @@ This repository contains a manuscript, figures, analysis scripts, and lightweigh
 ## Main Findings
 
 - The post-1995 expansion of the seismic-intensity network increases the probability of observing strong shaking near the epicenter, raising reported maximum intensity for comparable events.
-- Event mean station intensity can decrease after network expansion because many more distant, low-intensity observations enter the event average.
-- Treating zero retained stations as attenuation-only prediction gives an exact JMA intensity-class hit rate of 0.455 for the 22 target events with maximum intensity 6 upper or 7.
-- Observation-constrained interpolation reaches about 70% exact class agreement only at roughly 57.7 retained stations per 10,000 km2.
+- The within-event mean over reporting stations can decrease after network expansion because many more distant, low-intensity observations enter the event average.
+- Treating zero retained stations as a simplified attenuation baseline gives an exact JMA intensity-class hit rate of 0.455 for all withheld reporting stations in the 22 target events with maximum intensity 6 upper or 7.
+- Observation-constrained interpolation reaches about 70% exact class agreement only for all withheld reporting stations at roughly 57.7 retained stations per 10,000 km2.
+- That 57.7 stations per 10,000 km2 benchmark is not a sufficient condition for strong-motion reconstruction: in the highest-density bin, exact class accuracy is only 0.39-0.46 for I>=5 lower and 0.37-0.39 for I>=6 lower.
 - The 80% and 90% exact-class criteria are not reached within the tested density range, implying that density increase alone is insufficient under the present workflow.
 - A counterfactual analysis of the 2018 northern Osaka earthquake shows that resampling the modern network to the 1994 active-site geometry reduces the 100-km station count from 465 to 34 and lowers exact class accuracy from 0.877 to 0.544.
 
@@ -32,6 +33,7 @@ docs/reports/              Internal analysis reports retained as supplemental no
 ```
 
 Large raw and intermediate data are intentionally not committed. See [`data/README.md`](data/README.md).
+Reproducibility commands, analysis options, random seeds, and environment notes are summarized in [`docs/reproducibility.md`](docs/reproducibility.md).
 
 ## Data Sources
 
@@ -64,6 +66,7 @@ The main workflow scripts are:
 - `src/analyze_osaka_2018_network_counterfactual.py`: 2018 northern Osaka network-density counterfactual.
 
 The exact local paths used during development are not required by the repository design; users should place raw data under a local `data/` directory and write regenerated outputs under `outputs/`.
+See [`docs/reproducibility.md`](docs/reproducibility.md) for the command order and key options used for the manuscript revision.
 
 ## Authorship and AI Assistance
 

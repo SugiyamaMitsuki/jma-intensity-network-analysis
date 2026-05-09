@@ -47,3 +47,7 @@ outputs/
 ```
 
 Scripts write derived outputs to `outputs/csv/`, `outputs/png/`, and `outputs/manuscript/`.
+
+## Reproducibility Metadata
+
+The manuscript revision uses random station thinning with seed `20260509`, a minimum station intensity of `1.0`, event-region padding of `0.55` degrees, and smoothing kriging with nugget `0.02` unless otherwise noted. See [`../docs/reproducibility.md`](../docs/reproducibility.md) for the command order, key options, raw-data source URLs, and checksum workflow.
