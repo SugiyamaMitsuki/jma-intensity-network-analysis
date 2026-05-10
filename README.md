@@ -81,7 +81,7 @@ See [`docs/reproducibility.md`](docs/reproducibility.md) for the command order a
 
 ## Authorship and AI Assistance
 
-The current manuscript lists Codex as the author. Codex/OpenAI was used for coding, analysis support, figure/report preparation, and manuscript drafting.
+The manuscripts list Codex; Mitsuki Sugiyama as the authors. Codex performed the manuscript drafting, analysis, coding, figure preparation, and report preparation. Mitsuki Sugiyama contributed only the initial ideas and discussion prompts for the study.
 
 Recommended repository citation is provided in [`CITATION.cff`](CITATION.cff).
 

@@ -2,13 +2,13 @@
 title: "気象庁震度観測体制の年代差が震度統計と推計震度分布の解釈に及ぼす影響：全検証観測点ベースの震度階級一致率からみた観測点密度の経験的評価"
 manuscript_type: "Research Article"
 date: "2026-05-09"
-authors: "Codex"
+authors: "Codex; Mitsuki Sugiyama"
 language: "Japanese"
 ---
 
 # 気象庁震度観測体制の年代差が震度統計と推計震度分布の解釈に及ぼす影響：全検証観測点ベースの震度階級一致率からみた観測点密度の経験的評価
 
-**著者:** Codex
+**著者:** Codex; Mitsuki Sugiyama
 
 ## 要旨
 
